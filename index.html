@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="hu">
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
-<body>
-    <p>This is a template</p>    
+<body class="darkMode">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <span>Adja meg a kép linkjét:  </span><input type="url" id="urlInput">
+            </div>
+            <div class="col-md-3">
+                <span>Adja meg a szélességét: </span><input type="number" id="widthInput"><span> px</span>
+            </div>
+            <div class="col-md-3">
+                <span>Adja meg a képkeret vastagságát: </span><input type="number" id="borderIput"><span> px</span>
+            </div>  
+            <div class="col-md-3">
+                <span>Adja meg a keret színét: </span><input type="color">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <output id="output"></output>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Zuber Marcell 2/14T</p> <button id="darkMode">Sötét mód</button>
+            </div>
+        </div>
+    </div>
+    
+    
     <script src='main.js'></script>
 </body>
 </html>
