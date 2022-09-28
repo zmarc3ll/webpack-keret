@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
-<body id="darkMode" class="d-flex flex-column min-vh-100">
+<body class="darkMode" id="darkMode" class="d-flex flex-column min-vh-100">
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-md-3">
@@ -20,18 +20,15 @@
                 <span>Adja meg a képkeret vastagságát: </span><input type="number" id="borderIput"><span> px</span>
             </div>  
             <div class="col-md-3">
-                <p>Adja meg a keret színét: </p><input type="color">
+                <p>Adja meg a keret színét: </p><input type="color" id="colorInput">
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <output id="output"></output>
+                <section id="imageSection">
+                    <img src="/src/testKep.jpeg" alt="Kép" id="image">
+                </section>
             </div>
-        </div>
-        <div class="row">
-            <section id="imageSection">
-                <img src="" alt="" id="image">
-            </section>
         </div>
         <div class="row">
             <footer class="mt-auto">

@@ -14,9 +14,22 @@ function darkMode(){
         document.getElementById('darkMode').style.color="black"
     }
 }
-document.getElementById('image')
-
-function init() {
+function kepMegjelenit(){
+    let url=document.getElementById('urlInput').url;
+    document.getElementById('image').src=url;
 }
+document.getElementById('urlInput').onchange=kepMegjelenit();
+
+function kepSzelesseg(){
+    let imageWidth = document.getElementById('widthInput').value;
+    document.getElementById('image').style.width=imageWidth;
+}
+document.getElementById('widthInput').onchange=kepSzelesseg();
+
+
+function init(){
+
+}
+
 console.log('loaded')
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded',init);
