@@ -1,8 +1,8 @@
 .darkMode{
-    background-color: black;
-    color: white;
+    /* background-color: black;
+    color: white; */
 }
 body{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: black;
 }
