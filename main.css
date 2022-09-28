@@ -10910,10 +10910,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.darkMode{
-    /* background-color: black;
-    color: white; */
-}
 body{
     background-color: rgb(255, 255, 255);
     color: black;
