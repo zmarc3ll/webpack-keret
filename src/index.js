@@ -24,7 +24,7 @@ function kepSzelesseg(){
 
 function keretVastagsag(){
     let vastagsag=document.getElementById('borderInput').value;
-    document.getElementById('image').style.borderWidth=vastagsag+ "px";
+    document.getElementById('image').style.border=vastagsag+ "px solid";
 }
 
 function keretSzin(){
@@ -33,10 +33,11 @@ function keretSzin(){
 } 
 
 function init(){
+
     document.getElementById('darkModeButton').addEventListener('click',darkMode);
     document.getElementById('urlInput').addEventListener('change', kepMegjelenit);
     document.getElementById('widthInput').addEventListener('change',kepSzelesseg);
-    //document.getElementById('borderInput').addEventListener('change',keretVastagsag);
+    document.getElementById('borderInput').addEventListener('change',keretVastagsag);
     document.getElementById("colorInput").addEventListener('change',keretSzin);
 }
 
