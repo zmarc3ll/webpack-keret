@@ -3,8 +3,6 @@ import  'bootstrap/dist/css/bootstrap.css';
 
 import './style.css';
 
-document.getElementById('darkModeButton').addEventListener('click',darkMode);
-
 function darkMode(){
     if(document.getElementById('darkMode').style.backgroundColor=="white"){
         document.getElementById('darkMode').style.backgroundColor="black";
@@ -15,21 +13,32 @@ function darkMode(){
     }
 }
 function kepMegjelenit(){
-    let url=document.getElementById('urlInput').url;
+    let url=document.getElementById('urlInput').value;
     document.getElementById('image').src=url;
 }
-document.getElementById('urlInput').onchange=kepMegjelenit();
 
 function kepSzelesseg(){
     let imageWidth = document.getElementById('widthInput').value;
-    document.getElementById('image').style.width=imageWidth;
+    document.getElementById('image').style.width=imageWidth+ "px";
 }
-document.getElementById('widthInput').onchange=kepSzelesseg();
 
+function keretVastagsag(){
+    let vastagsag=document.getElementById('borderInput').value;
+    document.getElementById('image').style.borderWidth=vastagsag+ "px";
+}
+
+function keretSzin(){
+    let color=document.getElementById('colorInput').value;
+    document.getElementById('image').style.borderColor=color;
+} 
 
 function init(){
-
+    document.getElementById('darkModeButton').addEventListener('click',darkMode);
+    document.getElementById('urlInput').addEventListener('change', kepMegjelenit);
+    document.getElementById('widthInput').addEventListener('change',kepSzelesseg);
+    //document.getElementById('borderInput').addEventListener('change',keretVastagsag);
+    document.getElementById("colorInput").addEventListener('change',keretSzin);
 }
 
-console.log('loaded')
+console.log('loaded');
 document.addEventListener('DOMContentLoaded',init);
